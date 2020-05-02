@@ -3,6 +3,9 @@
 [![TravisCI](https://travis-ci.org/phpexpertsinc/PHPLOCAnalyzer.svg?branch=master)](https://travis-ci.org/phpexpertsinc/PHPLOCAnalyzer)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/d04106eacbb4a4ea4a55/test_coverage)](https://codeclimate.com/github/phpexpertsinc/PHPLOCAnalyzer/test_coverage)
 
+**I made a timelapse of the creation of this project up to v1.0.0.**
+**You can watch it at https://www.youtube.com/watch?v=BlYdIxj_A6A**
+
 PHPLOCAnalyzer is a PHP Experts, Inc., Project meant to automate the reporting from [sebastianbergmann/phploc](https://github.com/sebastianbergmann/phploc).
 
 It turns this
