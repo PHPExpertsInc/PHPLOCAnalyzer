@@ -1,8 +1,7 @@
 # PHPLOCAnalyzer Project
 
-[![TravisCI](https://travis-ci.org/phpexpertsinc/skeleton.svg?branch=master)](https://travis-ci.org/phpexpertsinc/skeleton)
-[![Maintainability](https://api.codeclimate.com/v1/badges/503cba0c53eb262c947a/maintainability)](https://codeclimate.com/github/phpexpertsinc/SimpleDTO/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/503cba0c53eb262c947a/test_coverage)](https://codeclimate.com/github/phpexpertsinc/SimpleDTO/test_coverage)
+[![TravisCI](https://travis-ci.org/phpexpertsinc/PHPLOCAnalyzer.svg?branch=master)](https://travis-ci.org/phpexpertsinc/PHPLOCAnalyzer)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/d04106eacbb4a4ea4a55/test_coverage)](https://codeclimate.com/github/phpexpertsinc/PHPLOCAnalyzer/test_coverage)
 
 PHPLOCAnalyzer is a PHP Experts, Inc., Project meant to automate the reporting from [sebastianbergmann/phploc](https://github.com/sebastianbergmann/phploc).
 
