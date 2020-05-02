@@ -12,13 +12,16 @@ before_script:
   - travis_retry composer self-update
   - travis_retry composer install --no-interaction --prefer-source
 
-script: 
+script:
   # Fail the Travis CI build on the first error.
   - set -e
   - mkdir -p build/logs
   - php vendor/bin/phpcs --standard=PSR2 src
   - php vendor/bin/phpcs --standard=PSR1 tests
   - php vendor/bin/phpstan analyze --level max src
+  - wget https://phar.phpunit.de/phploc.phar
+  - chmod 0755 phploc.phar
+  - sudo mv phploc.phar /usr/local/bin/phploc
   - vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
 
 after_script:
