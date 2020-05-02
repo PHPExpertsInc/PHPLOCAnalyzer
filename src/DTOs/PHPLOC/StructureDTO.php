@@ -27,7 +27,8 @@ use PHPExperts\SimpleDTO\SimpleDTO;
  * @property int $methods_scope_nonstatic
  * @property int $methods_scope_static
  * @property int $visibility_public
- * @property int $visibility_nonpublic
+ * @property int $visibility_protected
+ * @property int $visibility_private
  * @property int $functions_named
  * @property int $functions_anonymous
  * @property int $constants_global
