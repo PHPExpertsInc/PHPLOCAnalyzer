@@ -24,30 +24,30 @@ class PHPLOCAnalyzerTestCase extends TestCase
     {
         $expected = <<<JSON
 {
-    "directories": 1,
-    "files": 5,
+    "directories": -1,
+    "files": -1,
     "size": {
-        "loc": 692,
-        "loc_comments": 115,
-        "loc_noncomment": 577,
-        "loc_logical": 174,
-        "loc_global_scope": 5,
-        "classes": 167,
-        "class_length_avg": 33,
-        "class_length_min": 1,
+        "loc": 592,
+        "loc_comments": 74,
+        "loc_noncomment": 518,
+        "loc_logical": 160,
+        "loc_global_scope": 0,
+        "classes": 160,
+        "class_length_avg": 53,
+        "class_length_min": 6,
         "class_length_max": 94,
         "method_length_avg": 3,
         "method_length_min": 0,
         "method_length_max": 11,
-        "functions": 2,
+        "functions": 0,
         "function_length_avg": 0
     },
     "cyclomatic": {
-        "lloc": 0.47,
-        "class_avg": 17.2,
-        "class_min": 1,
+        "lloc": 0.51,
+        "class_avg": 28,
+        "class_min": 3,
         "class_max": 44,
-        "method_avg": 3.07,
+        "method_avg": 3.14,
         "method_min": 1,
         "method_max": 15
     },
@@ -57,29 +57,29 @@ class PHPLOCAnalyzerTestCase extends TestCase
         "super_globals": 0,
         "attributes_nonstatic": 55,
         "attributes_static": 0,
-        "methodcalls_nonstatic": 41,
-        "methodcalls_static": 8
+        "methodcalls_nonstatic": 39,
+        "methodcalls_static": 4
     },
     "structure": {
-        "namespaces": 2,
+        "namespaces": 1,
         "interfaces": 0,
         "traits": 1,
         "classes_abstract": 2,
-        "classes_concrete": 2,
-        "methods_scope_nonstatic": 35,
+        "classes_concrete": 0,
+        "methods_scope_nonstatic": 33,
         "methods_scope_static": 0,
-        "visibility_public": 19,
+        "visibility_public": 17,
         "visibility_protected": 5,
         "visibility_private": 11,
         "functions_named": 0,
-        "functions_anonymous": 4,
+        "functions_anonymous": 3,
         "constants_global": 0,
         "constants_class": 3
     }
 }
 JSON;
 
-        $phplocDTO = PHPLOCAnalyzer::analyze(__DIR__ . '/../vendor/phpexperts/simple-dto');
+        $phplocDTO = PHPLOCAnalyzer::analyze(realpath(__DIR__ . '/../vendor/phpexperts/simple-dto/src/'));
         self::assertInstanceOf(PHPLOCDTO::class, $phplocDTO);
 
         $actual = json_encode($phplocDTO, JSON_PRETTY_PRINT);

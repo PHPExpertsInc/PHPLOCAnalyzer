@@ -18,13 +18,13 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
         "ext-json": "*",
         "symfony/var-dumper": ">=4.0",
         "phpexperts/simple-dto": "^2.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "7.*|8.*",
+        "phpunit/phpunit": "8.*",
         "phpstan/phpstan": "*",
         "friendsofphp/php-cs-fixer": "*",
         "povils/phpmnd": "*",
@@ -40,10 +40,5 @@
     },
     "config": {
         "classmap-authoritative": true
-    },
-    "scripts": {
-        "post-create-project-cmd": [
-            "php install.php"
-        ]
     }
 }
