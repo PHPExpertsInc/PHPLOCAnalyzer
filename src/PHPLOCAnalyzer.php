@@ -39,6 +39,7 @@ final class PHPLOCAnalyzer
     {
         self::assertHasPHPLOC();
 
+        echo "phploc $sourcedir\n";
         $phploc = shell_exec("phploc $sourcedir");
         if (!$phploc) {
             throw new RuntimeException("phploc did not analyze '$sourcedir' successfully.");
