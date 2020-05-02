@@ -1,0 +1,49 @@
+{
+    "name": "phpexperts/phploc-analyzer",
+    "description": "A way to easily get phploc stats into your program.",
+    "keywords": [
+        "phploc",
+        "code analysis"
+    ],
+    "homepage": "https://www.phpexperts.pro/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PHP Experts, Inc.",
+            "homepage": "https://www.phpexperts.pro/"
+        },
+        {
+            "name": "Theodore R. Smith",
+            "homepage": "https://www.linkedin.com/in/tedrsmith"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "ext-json": "*",
+        "symfony/var-dumper": "^5.0",
+        "phpexperts/simple-dto": "^2.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "7.*|8.*",
+        "phpstan/phpstan": "*",
+        "friendsofphp/php-cs-fixer": "*",
+        "povils/phpmnd": "*",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPExperts\\PHPLOCAnalyzer\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { "PHPExperts\\PHPLOCAnalyzer\\Tests\\" : "tests/" }
+    },
+    "config": {
+        "classmap-authoritative": true
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "php install.php"
+        ]
+    }
+}
