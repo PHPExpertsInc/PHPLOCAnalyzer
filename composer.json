@@ -20,7 +20,7 @@
     "require": {
         "php": "^7.1",
         "ext-json": "*",
-        "symfony/var-dumper": "^5.0",
+        "symfony/var-dumper": ">=4.0",
         "phpexperts/simple-dto": "^2.4"
     },
     "require-dev": {
