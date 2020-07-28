@@ -37,8 +37,5 @@
     },
     "autoload-dev": {
         "psr-4": { "PHPExperts\\PHPLOCAnalyzer\\Tests\\" : "tests/" }
-    },
-    "config": {
-        "classmap-authoritative": true
     }
 }
