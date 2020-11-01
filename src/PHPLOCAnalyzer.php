@@ -35,7 +35,7 @@ final class PHPLOCAnalyzer
      * @throws InvalidDataTypeException
      * @throws \RuntimeException
      */
-    public static function analyze(string $sourcedir): PHPLOCDTO
+    public static function analyze(string $sourcedir): ?PHPLOCDTO
     {
         self::assertHasPHPLOC();
 
@@ -66,8 +66,12 @@ final class PHPLOCAnalyzer
                 $keyPairs[$key] = $matches[2];
             }
         }
-//        dd($lines);
 
+        if (empty($keyPairs)) {
+            return null;
+        }
+
+//        dd($lines);
         // 4. Build the DTO.
         try {
             $phplocDTO = new PHPLOCDTO([
